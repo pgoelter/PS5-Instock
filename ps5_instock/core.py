@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options
 
 from mail import send_email
 
-config = pyconfig.Config.from_json_file("config.json")
+config = pyconfig.Config.from_json_file("config.example.json")
 logging.basicConfig()
 
 LOG_FORMAT = '%(levelname) -10s %(asctime)s %(name) -30s %(funcName) -35 %(lineno) -5d: %(message)s'
