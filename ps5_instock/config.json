@@ -2,7 +2,7 @@
   "mail": {
     "login": "MAIL_ADDRESS",
     "password": "PASSWORD_MAIL",
-    "receivers": ["philipp.gltr@gmail.com", "sarah.klein93@gmx.de"]
+    "receivers": ["", ""]
   },
   "checkInterval": 120,
   "vendors": [
