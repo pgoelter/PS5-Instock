@@ -22,19 +22,7 @@ def stock_routine():
     vendors = config.get("vendors")
 
     for vendor in vendors:
-        res = check_stock(vendor)
-
-        # if res:
-        #     availability_list.append(res)
-
-    # if availability_list:
-    #     mail_content = ""
-    #     for item in availability_list:
-    #         mail_content += f"Playstation 5 available at {item[0]}: {item[1]}\n"
-    #     send_email(mail_content=mail_content, receivers=config.get("mail.receivers"),
-    #                subject="PS5 is available!!",
-    #                credentials={"login": config.get("mail.sender"),
-    #                             "password": config.get("mail.password")})
+        check_stock(vendor)
 
 
 def check_stock(vendor):
@@ -50,7 +38,7 @@ def check_stock(vendor):
     try:
         driver.find_element_by_id(vendor["lookfor"])
         available = True
-    except Exception as e:
+    except Exception:
         available = False
 
     driver.quit()
@@ -60,7 +48,9 @@ def check_stock(vendor):
         send_email(mail_content=content, receivers=config.get("mail.receivers"),
                    subject=f"{vendor['vendor']}: PS5 is available!!",
                    credentials={"login": config.get("mail.sender"),
-                                "password": config.get("mail.password")})
+                                "password": config.get("mail.password"),
+                                "smtp_host": config.get("mail.smtp_host"),
+                                "smtp_port": config.get("mail.smtp_port")})
         return vendor["vendor"], vendor["url"], available
 
     logger.info(f"Not available at {vendor['vendor']}")
@@ -70,7 +60,7 @@ def main():
     while True:
         try:
             stock_routine()
-        except:
+        except Exception:
             logger.error(f"Something went wrong trying again in {config.get('checkInterval')} seconds!")
         time.sleep(config.get("checkInterval"))
 

@@ -1,1 +1,4 @@
 .idea/
+/venv/
+/ps5_instock/config.dev.json
+/ps5_instock/__pycache__/

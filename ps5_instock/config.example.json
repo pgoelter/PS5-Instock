@@ -2,7 +2,9 @@
   "mail": {
     "login": "MAIL_ADDRESS",
     "password": "PASSWORD_MAIL",
-    "receivers": ["", ""]
+    "receivers": ["RECEIVER_MAIL_1", "RECEIVER_MAIL_2"],
+    "smtp_host": "smtp.gmail.com",
+    "smtp_port": 587
   },
   "checkInterval": 120,
   "vendors": [
