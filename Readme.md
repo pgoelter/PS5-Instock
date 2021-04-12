@@ -36,6 +36,6 @@ Explained with the following sample configuration.
 **checkInterval** : Interval in seconds in which the product is checked for availability.  
 
 
-**vendors.vendor** : Name of the vendor.
-**vendors.url** : Url to the product of the vendor.
+**vendors.vendor** : Name of the vendor.  
+**vendors.url** : Url to the product of the vendor.  
 **vendors.lookfor**: Selector of the add to cart or buy button.
