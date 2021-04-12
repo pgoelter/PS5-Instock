@@ -1,0 +1,35 @@
+{
+  "mail": {
+    "login": "MAIL_ADDRESS",
+    "password": "PASSWORD_MAIL",
+    "receivers": ["philipp.gltr@gmail.com", "sarah.klein93@gmx.de"]
+  },
+  "checkInterval": 120,
+  "vendors": [
+    {
+      "vendor": "Media Markt",
+      "url": "https://www.mediamarkt.de/de/product/_sony-playstation%C2%AE5-2661938.html",
+      "lookfor": "pdp-add-to-cart-button"
+    },
+    {
+      "vendor": "Saturn",
+      "url": "https://www.saturn.de/de/product/_sony-playstation%C2%AE5-2661938.html",
+      "lookfor": "pdp-add-to-cart-button"
+    },
+    {
+      "vendor": "Alternate",
+      "url": "https://www.alternate.de/Sony-Interactive-Entertainment/PlayStation-5-Spielkonsole/html/product/1651220",
+      "lookfor": "add-to-cart-form"
+    },
+    {
+      "vendor": "Euronics",
+      "url": "https://www.euronics.de/spiele-und-konsolen-film-und-musik/spiele-und-konsolen/playstation-5/spielekonsole/playstation-5-konsole-4061856837826",
+      "lookfor": "buybox--button"
+    },
+    {
+      "vendor": "Amazon",
+      "url": "https://www.amazon.de/Sony-Interactive-Entertainment-PlayStation-5/dp/B08H93ZRK9/ref=sr_1_1?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=playstation+5&qid=1618137841&sr=8-1",
+      "lookfor": "add-to-cart-button"
+    }
+  ]
+}
