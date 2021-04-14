@@ -1,3 +1,9 @@
+A small console application to check whether one or more product, specified in a config file is available for sale.
+The given configuration checks if the Playstation 5 is available in some german online shops.
+Availability check happens by checking whether an add to cart button is available or not.
+If it is available an email with the respective URL is sent to receivers specified in the config file.
+
+The e-mail used to send the notification mail is also configured in the config file.
 # Setup
 1. Create virtual environment with anaconda, venv or similar.
 2. Activate environment
