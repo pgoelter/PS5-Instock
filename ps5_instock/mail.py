@@ -4,14 +4,20 @@ from email.mime.text import MIMEText
 
 
 def send_email(mail_content: str, subject: str, receivers: list, credentials: dict):
-    """
+    """Send an e-mail with a given content and subject to one or more receivers. The credentials for the sender passed
+    in parameter credentials.
+    credentials = {
+        "login": "sender@example.com",
+        "password": "PASSWORD_SENDER_MAIL",
+        "smtp_host": "SMTP_SERVER_ADDRESS",
+        "smtp_port": "SMTP_SERVER_PORT"
+    }
+    Args:
+        mail_content: Content of the email
+        subject: Subject of the email
+        receivers: A list of e-mail addresses which should receive the mail.
+        credentials: A dictionary containing the credentials of the sender e-mail address.
 
-    :param mail_content: The content of the mail.
-    :param subject: The subject of the mail.
-    :param receivers: List of receivers for the mail.
-    :param credentials: Contains the keys sender and password, which in return contain the sender mail adress and the
-    corresponding password.
-    :return:
     """
 
     # Setup MIME
