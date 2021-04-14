@@ -47,7 +47,7 @@ def check_stock(vendor):
         content = f"Playstation 5 available at {vendor['vendor']}: {vendor['url']}"
         send_email(mail_content=content, receivers=config.get("mail.receivers"),
                    subject=f"{vendor['vendor']}: PS5 is available!!",
-                   credentials={"login": config.get("mail.sender"),
+                   credentials={"login": config.get("mail.login"),
                                 "password": config.get("mail.password"),
                                 "smtp_host": config.get("mail.smtp_host"),
                                 "smtp_port": config.get("mail.smtp_port")})
